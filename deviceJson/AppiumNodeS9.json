@@ -1,0 +1,28 @@
+{
+  "capabilities":
+      [
+        {
+		      "browserName": "Android 9",
+		      "platformName": "Android",
+          "platformVersion": "9.0",
+          "deviceName": "Samsung Galaxy S9",
+		      "udid": "22b222b23d047ece",
+          "automationName": "UiAutomator2"
+        }
+      ],
+  "configuration":
+  {
+    "cleanUpCycle":3000,
+    "timeout":30000,
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "url":"http://localhost:5000/wd/hub",
+    "host": "localhost",
+    "port": 5000,
+    "maxSession": 2,
+    "register": true,
+    "registerCycle": 5000,
+    "hubPort": 4444,
+    "hubHost": "localhost",
+    "hubProtocol": "http"
+  }
+}

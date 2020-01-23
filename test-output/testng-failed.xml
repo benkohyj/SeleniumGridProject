@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="instances" name="Failed suite [Device List]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="instances" name="Samsung Galaxy S9(failed)">
+    <parameter name="app" value="\\driverResources\\com.buuuk.st_com.sph.straitstimes.views.activities.SplashActivity_ver_713.apk"/>
+    <parameter name="appPackage" value="com.buuuk.st"/>
+    <parameter name="appActivity" value="com.sph.straitstimes.views.activities.SplashActivity"/>
+    <parameter name="port" value="5000"/>
+    <parameter name="udid" value="22b222b23d047ece"/>
+    <parameter name="deviceName" value="Samsung Galaxy S9"/>
+    <parameter name="version" value="9.0"/>
+    <classes>
+      <class name="test.testcases">
+        <methods>
+          <include name="agreeLiscensePage"/>
+          <include name="setCaps"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- test.testcases -->
+    </classes>
+  </test> <!-- Samsung Galaxy S9(failed) -->
+  <test thread-count="2" parallel="instances" name="Samsung Galaxy Note 4(failed)">
+    <parameter name="app" value="\\driverResources\\com.buuuk.st_com.sph.straitstimes.views.activities.SplashActivity_ver_713.apk"/>
+    <parameter name="appPackage" value="com.buuuk.st"/>
+    <parameter name="appActivity" value="com.sph.straitstimes.views.activities.SplashActivity"/>
+    <parameter name="port" value="4724"/>
+    <parameter name="udid" value="4222c2db"/>
+    <parameter name="deviceName" value="Samsung Galaxy Note 4"/>
+    <parameter name="version" value="6.0.1"/>
+    <classes>
+      <class name="test.testcases">
+        <methods>
+          <include name="agreeLiscensePage"/>
+          <include name="setCaps"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- test.testcases -->
+    </classes>
+  </test> <!-- Samsung Galaxy Note 4(failed) -->
+</suite> <!-- Failed suite [Device List] -->

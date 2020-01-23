@@ -1,0 +1,5 @@
+appium --nodeconfig C:\Users\senghwee\git\SeleniumGrid\nodeConfigNote4.json -p 4724 -bp 4728
+
+appium --nodeconfig C:\Users\senghwee\Documents\Appium\AppiumGrid\DeviceJSON\AppiumNodeS9.json -p 5000 -bp 5005
+
+java -Dwebdriver.chrome.driver="C:\Users\senghwee\Documents\BrowserDriver\chromedriver.exe" -jar selenium-server-standalone-3.141.59.jar -role webdriver -hub http://localhost:4444/grid/register -port 5566
