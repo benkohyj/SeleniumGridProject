@@ -2,11 +2,10 @@
   "capabilities":
       [
         {
-		      "browserName": "Android 9",
-		      "platformName": "Android",
+		  "platformName": "Android",
           "platformVersion": "9.0",
           "deviceName": "Samsung Galaxy S9",
-		      "udid": "22b222b23d047ece",
+		  "udid": "22b222b23d047ece",
           "automationName": "UiAutomator2"
         }
       ],
@@ -18,6 +17,7 @@
     "url":"http://localhost:5000/wd/hub",
     "host": "localhost",
     "port": 5000,
+    "systemPort":8200,
     "maxSession": 2,
     "register": true,
     "registerCycle": 5000,

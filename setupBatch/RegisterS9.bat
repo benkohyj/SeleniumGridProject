@@ -1,0 +1,1 @@
+appium --nodeconfig C:\Users\senghwee\eclipse-workspace\SeleniumGrid\deviceJson\AppiumNodeS9.json -p 5000

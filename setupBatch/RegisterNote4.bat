@@ -1,0 +1,1 @@
+appium --nodeconfig C:\Users\senghwee\eclipse-workspace\SeleniumGrid\deviceJson\nodeConfigNote4.json -p 4724

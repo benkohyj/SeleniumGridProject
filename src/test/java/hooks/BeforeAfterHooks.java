@@ -24,14 +24,13 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class BeforeAfterHooks{
 	
-	private static final String Android = null;
 	//define public variable
-	public static AndroidDriver<AndroidElement> androiddriver;
+	public AndroidDriver<AndroidElement> androiddriver;
 	//public static WebDriver chromedriver;
 	
 	@BeforeMethod(alwaysRun=true)
-	@Parameters({"port", "deviceName", "udid", "app", "appPackage", "appActivity"})
-	public void setCaps(String port, String deviceName, String udid, String app, String appPackage, String appActivity){
+	@Parameters({"port","systemPort", "deviceName", "udid", "app", "appPackage", "appActivity"})
+	public void setCaps(String port, String systemPort, String deviceName, String udid, String app, String appPackage, String appActivity){
 
 		String rPath= System.getProperty("user.dir"); //resource path
 		/*
@@ -49,6 +48,7 @@ public class BeforeAfterHooks{
 		androidCaps.setCapability("platformName", "Android");
 		androidCaps.setCapability("deviceName", deviceName);
 		androidCaps.setCapability("udid", udid);
+		androidCaps.setCapability("systemPort", systemPort);
 		androidCaps.setCapability("app", rPath + app );
 		androidCaps.setCapability("appPackage", appPackage);
 		androidCaps.setCapability("appActivity", appActivity);
@@ -71,8 +71,8 @@ public class BeforeAfterHooks{
 		androiddriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	}
 		
-	@AfterMethod(alwaysRun = true)
-	public static void endTest() {
+	@AfterTest(alwaysRun = true)
+	public void endTest() {
 		androiddriver.close();
 		System.out.println("Test Ended");
 		//chromedriver.quit();

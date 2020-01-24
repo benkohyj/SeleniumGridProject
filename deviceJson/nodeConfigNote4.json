@@ -2,7 +2,6 @@
   "capabilities":
       [
         {
-	      "browserName": "Android 6.0.1",
           "platformName":"Android",
           "platformVersion": "6.0.1",
           "deviceName": "Samsung Galaxy Note 4",
@@ -18,6 +17,7 @@
     "url":"http://localhost:4724/wd/hub",
     "host": "localhost",
     "port": 4724,
+    "systemPort":8201,
     "maxSession": 2,
     "register": true,
     "registerCycle": 5000,

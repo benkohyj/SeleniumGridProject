@@ -13,16 +13,9 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class testcases extends BeforeAfterHooks{
 		
-	   
-	
-	
 	@Test
-	public static void agreeLiscensePage() {
+	public void agreeLiscensePage() {
 		
-		//androiddriver.findElementById("btn_tnc_ok").click();
-		androiddriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		
-		//AndroidDriverWait wait = new WebDriverWait(driver, 10);
 		AndroidElement accept = androiddriver.findElementById("btn_tnc_ok");
 		accept.click();
 		

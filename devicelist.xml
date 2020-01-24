@@ -24,6 +24,7 @@
 		<parameter name="deviceName" value="Samsung Galaxy Note 4"></parameter>
 		<parameter name="udid" value="4222c2db"></parameter>
 		<parameter name="port" value="4724"></parameter>
+
 		<parameter name="version" value="6.0.1"></parameter>
 		<parameter name="app"
 			value="\\driverResources\\com.buuuk.st_com.sph.straitstimes.views.activities.SplashActivity_ver_713.apk"></parameter>
