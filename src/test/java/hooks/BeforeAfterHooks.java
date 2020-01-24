@@ -1,5 +1,6 @@
 package hooks;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -21,6 +22,7 @@ import org.testng.annotations.Test;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import loadscrcpy.Load_scrcpy;
 
 public class BeforeAfterHooks{
 	
@@ -31,7 +33,14 @@ public class BeforeAfterHooks{
 	@BeforeMethod(alwaysRun=true)
 	@Parameters({"port","systemPort", "deviceName", "udid", "app", "appPackage", "appActivity"})
 	public void setCaps(String port, String systemPort, String deviceName, String udid, String app, String appPackage, String appActivity){
-
+		
+		try {
+			Load_scrcpy.loadscrcpy(udid);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		String rPath= System.getProperty("user.dir"); //resource path
 		/*
 		//define Chrome Capabilities

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-24T10:27:16 SGT" name="Device List" finished-at="2020-01-24T10:28:07 SGT" duration-ms="51040">
+  <suite started-at="2020-01-24T11:24:16 SGT" name="Device List" finished-at="2020-01-24T11:26:54 SGT" duration-ms="158472">
     <groups>
     </groups>
-    <test started-at="2020-01-24T10:27:16 SGT" name="Samsung Galaxy S9" finished-at="2020-01-24T10:28:03 SGT" duration-ms="46752">
+    <test started-at="2020-01-24T11:24:16 SGT" name="Samsung Galaxy S9" finished-at="2020-01-24T11:26:54 SGT" duration-ms="158472">
       <class name="test.testcases">
-        <test-method is-config="true" signature="setCaps(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.testcases@47542153]" started-at="2020-01-24T10:27:16 SGT" name="setCaps" finished-at="2020-01-24T10:28:00 SGT" duration-ms="44371" status="PASS">
+        <test-method is-config="true" signature="setCaps(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.testcases@47542153]" started-at="2020-01-24T11:24:16 SGT" name="setCaps" finished-at="2020-01-24T11:24:46 SGT" duration-ms="30566" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,7 +21,7 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[Android]]>
+                <![CDATA[Samsung Galaxy S9]]>
               </value>
             </param>
             <param index="3">
@@ -48,27 +48,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setCaps -->
-        <test-method signature="agreeLiscensePage()[pri:0, instance:test.testcases@47542153]" started-at="2020-01-24T10:28:00 SGT" name="agreeLiscensePage" finished-at="2020-01-24T10:28:03 SGT" duration-ms="2203" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- agreeLiscensePage -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:test.testcases@47542153]" started-at="2020-01-24T10:28:03 SGT" name="endTest" finished-at="2020-01-24T10:28:03 SGT" duration-ms="90" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method signature="agreeLiscensePage()[pri:0, instance:test.testcases@47542153]" started-at="2020-01-24T11:24:46 SGT" name="agreeLiscensePage" finished-at="2020-01-24T11:25:47 SGT" duration-ms="60272" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - undefined
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NI-CNU409DTV0', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
+System info: host: 'PI-SGH342Q2CJ', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: C:\Users\senghwee\eclipse-w..., appActivity: com.sph.straitstimes.views...., appPackage: com.buuuk.st, automationName: UiAutomator2, databaseEnabled: false, desired: {app: C:\Users\senghwee\eclipse-w..., appActivity: com.sph.straitstimes.views...., appPackage: com.buuuk.st, automationName: UiAutomator2, deviceName: Android, fullReset: false, noReset: true, platformName: android, systemPort: 8200, udid: 22b222b23d047ece}, deviceApiLevel: 28, deviceManufacturer: samsung, deviceModel: SM-G960F, deviceName: 22b222b23d047ece, deviceScreenDensity: 480, deviceScreenSize: 1080x2220, deviceUDID: 22b222b23d047ece, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 72, systemPort: 8200, takesScreenshot: true, udid: 22b222b23d047ece, viewportRect: {height: 2004, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 64fc1709-625d-42f9-901b-e5859f6a1193]]>
+Capabilities {app: C:\Users\weijunw\git\Seleni..., appActivity: com.sph.straitstimes.views...., appPackage: com.buuuk.st, automationName: UiAutomator2, databaseEnabled: false, desired: {app: C:\Users\weijunw\git\Seleni..., appActivity: com.sph.straitstimes.views...., appPackage: com.buuuk.st, automationName: UiAutomator2, deviceName: Samsung Galaxy S9, fullReset: false, noReset: true, platformName: android, systemPort: 8200, udid: 22b222b23d047ece}, deviceApiLevel: 28, deviceManufacturer: samsung, deviceModel: SM-G960F, deviceName: 22b222b23d047ece, deviceScreenDensity: 480, deviceScreenSize: 1080x2220, deviceUDID: 22b222b23d047ece, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 72, systemPort: 8200, takesScreenshot: true, udid: 22b222b23d047ece, viewportRect: {height: 2004, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: a6b5f3ad-9f59-4b76-b26a-d6be94a757f9
+*** Element info: {Using=id, value=btn_tnc_ok}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - undefined
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NI-CNU409DTV0', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
+System info: host: 'PI-SGH342Q2CJ', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: C:\Users\senghwee\eclipse-w..., appActivity: com.sph.straitstimes.views...., appPackage: com.buuuk.st, automationName: UiAutomator2, databaseEnabled: false, desired: {app: C:\Users\senghwee\eclipse-w..., appActivity: com.sph.straitstimes.views...., appPackage: com.buuuk.st, automationName: UiAutomator2, deviceName: Android, fullReset: false, noReset: true, platformName: android, systemPort: 8200, udid: 22b222b23d047ece}, deviceApiLevel: 28, deviceManufacturer: samsung, deviceModel: SM-G960F, deviceName: 22b222b23d047ece, deviceScreenDensity: 480, deviceScreenSize: 1080x2220, deviceUDID: 22b222b23d047ece, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 72, systemPort: 8200, takesScreenshot: true, udid: 22b222b23d047ece, viewportRect: {height: 2004, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 64fc1709-625d-42f9-901b-e5859f6a1193
+Capabilities {app: C:\Users\weijunw\git\Seleni..., appActivity: com.sph.straitstimes.views...., appPackage: com.buuuk.st, automationName: UiAutomator2, databaseEnabled: false, desired: {app: C:\Users\weijunw\git\Seleni..., appActivity: com.sph.straitstimes.views...., appPackage: com.buuuk.st, automationName: UiAutomator2, deviceName: Samsung Galaxy S9, fullReset: false, noReset: true, platformName: android, systemPort: 8200, udid: 22b222b23d047ece}, deviceApiLevel: 28, deviceManufacturer: samsung, deviceModel: SM-G960F, deviceName: 22b222b23d047ece, deviceScreenDensity: 480, deviceScreenSize: 1080x2220, deviceUDID: 22b222b23d047ece, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 72, systemPort: 8200, takesScreenshot: true, udid: 22b222b23d047ece, viewportRect: {height: 2004, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: a6b5f3ad-9f59-4b76-b26a-d6be94a757f9
+*** Element info: {Using=id, value=btn_tnc_ok}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -80,11 +80,69 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at test.testcases.agreeLiscensePage(testcases.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:830)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- agreeLiscensePage -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:test.testcases@47542153]" started-at="2020-01-24T11:25:47 SGT" name="endTest" finished-at="2020-01-24T11:26:54 SGT" duration-ms="67557" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Connection refused: no further information
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PI-SGH342Q2CJ', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: no further information
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PI-SGH342Q2CJ', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
+Driver info: driver.version: RemoteWebDriver
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$5(AppiumCommandExecutor.java:251)
+at java.base/java.util.Optional.orElseGet(Optional.java:362)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
 at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
 at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-at hooks.BeforeAfterHooks.endTest(BeforeAfterHooks.java:76)
+at hooks.BeforeAfterHooks.endTest(BeforeAfterHooks.java:85)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -104,6 +162,36 @@ at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: java.net.ConnectException: Connection refused: no further information
+at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:579)
+at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
+at java.base/java.net.Socket.connect(Socket.java:603)
+at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+at okhttp3.RealCall.execute(RealCall.java:77)
+at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+... 25 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.WebDriverException -->
@@ -112,112 +200,5 @@ at java.base/java.lang.Thread.run(Thread.java:830)
         </test-method> <!-- endTest -->
       </class> <!-- test.testcases -->
     </test> <!-- Samsung Galaxy S9 -->
-    <test started-at="2020-01-24T10:27:16 SGT" name="Samsung Galaxy Note 4" finished-at="2020-01-24T10:28:07 SGT" duration-ms="51040">
-      <class name="test.testcases">
-        <test-method is-config="true" signature="setCaps(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.testcases@778d1062]" started-at="2020-01-24T10:27:16 SGT" name="setCaps" finished-at="2020-01-24T10:28:04 SGT" duration-ms="48261" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4724]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[8201]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Samsung Galaxy Note 4]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[4222c2db]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[\\driverResources\\com.buuuk.st_com.sph.straitstimes.views.activities.SplashActivity_ver_713.apk]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[com.buuuk.st]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[com.sph.straitstimes.views.activities.SplashActivity]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setCaps -->
-        <test-method signature="agreeLiscensePage()[pri:0, instance:test.testcases@778d1062]" started-at="2020-01-24T10:28:04 SGT" name="agreeLiscensePage" finished-at="2020-01-24T10:28:07 SGT" duration-ms="2618" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- agreeLiscensePage -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:test.testcases@778d1062]" started-at="2020-01-24T10:28:07 SGT" name="endTest" finished-at="2020-01-24T10:28:07 SGT" duration-ms="97" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - undefined
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NI-CNU409DTV0', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: C:\Users\senghwee\eclipse-w..., appActivity: com.sph.straitstimes.views...., appPackage: com.buuuk.st, automationName: UiAutomator2, databaseEnabled: false, desired: {app: C:\Users\senghwee\eclipse-w..., appActivity: com.sph.straitstimes.views...., appPackage: com.buuuk.st, automationName: UiAutomator2, deviceName: Samsung Galaxy Note 4, fullReset: false, noReset: true, platformName: android, systemPort: 8201, udid: 4222c2db}, deviceApiLevel: 23, deviceManufacturer: samsung, deviceModel: SM-N910G, deviceName: 4222c2db, deviceScreenDensity: 640, deviceScreenSize: 1440x2560, deviceUDID: 4222c2db, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 4, platform: LINUX, platformName: Android, platformVersion: 6.0.1, statBarHeight: 96, systemPort: 8201, takesScreenshot: true, udid: 4222c2db, viewportRect: {height: 2464, left: 0, top: 96, width: 1440}, warnings: {}, webStorageEnabled: false}
-Session ID: b044f1c2-cb16-4c9c-9cdc-55dbae54cb8b]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - undefined
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NI-CNU409DTV0', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: C:\Users\senghwee\eclipse-w..., appActivity: com.sph.straitstimes.views...., appPackage: com.buuuk.st, automationName: UiAutomator2, databaseEnabled: false, desired: {app: C:\Users\senghwee\eclipse-w..., appActivity: com.sph.straitstimes.views...., appPackage: com.buuuk.st, automationName: UiAutomator2, deviceName: Samsung Galaxy Note 4, fullReset: false, noReset: true, platformName: android, systemPort: 8201, udid: 4222c2db}, deviceApiLevel: 23, deviceManufacturer: samsung, deviceModel: SM-N910G, deviceName: 4222c2db, deviceScreenDensity: 640, deviceScreenSize: 1440x2560, deviceUDID: 4222c2db, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 4, platform: LINUX, platformName: Android, platformVersion: 6.0.1, statBarHeight: 96, systemPort: 8201, takesScreenshot: true, udid: 4222c2db, viewportRect: {height: 2464, left: 0, top: 96, width: 1440}, warnings: {}, webStorageEnabled: false}
-Session ID: b044f1c2-cb16-4c9c-9cdc-55dbae54cb8b
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-at hooks.BeforeAfterHooks.endTest(BeforeAfterHooks.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:619)
-at org.testng.TestRunner.afterRun(TestRunner.java:849)
-at org.testng.TestRunner.run(TestRunner.java:590)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:830)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTest -->
-      </class> <!-- test.testcases -->
-    </test> <!-- Samsung Galaxy Note 4 -->
   </suite> <!-- Device List -->
 </testng-results>

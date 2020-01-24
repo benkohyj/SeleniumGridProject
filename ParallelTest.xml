@@ -4,8 +4,7 @@
 	thread-count="2">
 
 	<test name="Samsung Galaxy S9">
-		<!-- <parameter name="deviceName" value="Samsung Galaxy S9"></parameter> -->
-		<parameter name="deviceName" value="Android"></parameter>
+		<parameter name="deviceName" value="Samsung Galaxy S9"></parameter>
 		<parameter name="udid" value="22b222b23d047ece"></parameter>
 		<parameter name="port" value="5000"></parameter>
 		<parameter name="systemPort" value="8200"></parameter>
@@ -23,7 +22,6 @@
 
 
 	<test name="Samsung Galaxy Note 4">
-		<!-- <parameter name="deviceName" value="Samsung Galaxy Note 4"></parameter> -->
 		<parameter name="deviceName" value="Samsung Galaxy Note 4"></parameter>
 		<parameter name="udid" value="4222c2db"></parameter>
 		<parameter name="port" value="4724"></parameter>
