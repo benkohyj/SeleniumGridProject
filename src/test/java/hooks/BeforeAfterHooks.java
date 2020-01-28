@@ -77,12 +77,13 @@ public class BeforeAfterHooks{
 		System.out.println ("Android Driver Started");
 		//chromedriver= new RemoteWebDriver(url,chromeoptions);
 	
-		androiddriver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		//androiddriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 		
-	@AfterTest(alwaysRun = true)
+	@AfterTest(alwaysRun=true)
 	public void endTest() {
-		androiddriver.close();
+		System.out.println("Should exit App");
+		androiddriver.closeApp();
 		System.out.println("Test Ended");
 		//chromedriver.quit();
 	}

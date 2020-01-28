@@ -4,6 +4,8 @@ package test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import hooks.BeforeAfterHooks;
@@ -16,10 +18,11 @@ public class testcases extends BeforeAfterHooks{
 	@Test
 	public void agreeLiscensePage() {
 		
+		WebDriverWait androidWait = new WebDriverWait(androiddriver, 20);
+		androidWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("btn_tnc_ok")));
 		AndroidElement accept = androiddriver.findElementById("btn_tnc_ok");
 		accept.click();
-		
-		
+	
 	}
 	
 //	@Test
