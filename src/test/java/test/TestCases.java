@@ -13,7 +13,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class testcases extends BeforeAfterHooks{
+public class TestCases extends BeforeAfterHooks{
 		
 	@Test
 	public void agreeLiscensePage() {
@@ -31,13 +31,12 @@ public class testcases extends BeforeAfterHooks{
 		
 //	}
 
-/*
+
 @Test
-	public static void goSTweb() {
-		//chromedriver.get("https://straitstimes.com");
-		System.out.println("Hello World");
-	
+	public void goSTweb() {
+		chromedriver.get("https://straitstimes.com");
+		System.out.println(chromedriver.getTitle());
 	}
 
-*/
+
 }

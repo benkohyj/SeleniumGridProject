@@ -28,9 +28,9 @@ public class BeforeAfterHooks{
 	
 	//define public variable
 	public AndroidDriver<AndroidElement> androiddriver;
-	//public static WebDriver chromedriver;
+	public WebDriver chromedriver;
 	
-	@BeforeMethod(alwaysRun=true)
+	@BeforeTest(alwaysRun=true)
 	@Parameters({"port","systemPort", "deviceName", "udid", "app", "appPackage", "appActivity"})
 	public void setCaps(String port, String systemPort, String deviceName, String udid, String app, String appPackage, String appActivity){
 		
@@ -42,15 +42,18 @@ public class BeforeAfterHooks{
 		}
 		
 		String rPath= System.getProperty("user.dir"); //resource path
-		/*
+		
 		//define Chrome Capabilities
 		DesiredCapabilities chromeCaps = new DesiredCapabilities();
-		chromeCaps.setBrowserName("browserName");
+		chromeCaps.setBrowserName("chrome");
 		chromeCaps.setPlatform(Platform.ANY);	
 		
+		
 		ChromeOptions chromeoptions = new ChromeOptions();
+		chromeoptions.addArguments("--start-maximized");
+		System.setProperty("webdriver.chrome.driver", rPath + "/driverResources/chromedriver.exe");
 		chromeoptions.merge(chromeCaps);
-		*/
+	
 		//define Android Capabilities
 		DesiredCapabilities androidCaps = new DesiredCapabilities();
 		androidCaps.setCapability("automationName", "UiAutomator2");
@@ -65,17 +68,19 @@ public class BeforeAfterHooks{
 		androidCaps.setCapability("fullReset", "false");
 		
 		//Url to hub
-		URL url = null;
+		URL androidURL = null;
+		URL chromeURL = null; 
 		try {
-			url = new URL ("http://localhost:"+port+"/wd/hub");
+			androidURL = new URL ("http://localhost:"+port+"/wd/hub");
+			chromeURL = new URL ("http://localhost:5566/wd/hub");
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		//creating automation driver
-		androiddriver= new AndroidDriver<AndroidElement> (url,androidCaps);
+		androiddriver= new AndroidDriver<AndroidElement> (androidURL,androidCaps);
 		System.out.println ("Android Driver Started");
-		//chromedriver= new RemoteWebDriver(url,chromeoptions);
+		chromedriver= new RemoteWebDriver(chromeURL,chromeoptions);
 	
 		//androiddriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
@@ -85,7 +90,7 @@ public class BeforeAfterHooks{
 		System.out.println("Should exit App");
 		androiddriver.closeApp();
 		System.out.println("Test Ended");
-		//chromedriver.quit();
+		chromedriver.quit();
 	}
 
 }
