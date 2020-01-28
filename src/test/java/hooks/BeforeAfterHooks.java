@@ -51,7 +51,7 @@ public class BeforeAfterHooks{
 		
 		ChromeOptions chromeoptions = new ChromeOptions();
 		chromeoptions.addArguments("--start-maximized");
-		System.setProperty("webdriver.chrome.driver", rPath + "/driverResources/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", rPath + "/driverResources/chromedriver.exe");
 		chromeoptions.merge(chromeCaps);
 	
 		//define Android Capabilities
