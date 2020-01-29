@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Device List" verbose="1" parallel="tests"
-	thread-count="10">
+	thread-count="3">
 
 	<test name="Samsung Galaxy S9">
+		<parameter name="browserName" value="AndroidLocal"></parameter>
 		<parameter name="deviceName" value="Samsung Galaxy S9"></parameter>
 		<parameter name="udid" value="22b222b23d047ece"></parameter>
 		<parameter name="port" value="5000"></parameter>
@@ -22,6 +23,7 @@
 
 
 	<test name="Samsung Galaxy Note 4">
+		<parameter name="browserName" value="AndroidLocal"></parameter>
 		<parameter name="deviceName" value="Samsung Galaxy Note 4"></parameter>
 		<parameter name="udid" value="4222c2db"></parameter>
 		<parameter name="port" value="4724"></parameter>
@@ -41,11 +43,11 @@
 
 	<test name="Chrome">
 		<parameter name="browserName" value="chrome"></parameter>
-		<parameter name="broswerPort" value = "5566"></parameter>
+		<parameter name="port" value="5566"></parameter>
 		<classes>
-		 	<class name="test.TestCases"></class>
-		</classes> 
-	</test> 
+			<class name="test.TestCases"></class>
+		</classes>
+	</test>
 
 </suite>
  
