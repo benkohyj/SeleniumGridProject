@@ -3,23 +3,23 @@
 <suite name="Device List" verbose="1" parallel="tests"
 	thread-count="3">
 
-	<test name="Samsung Galaxy S9">
-		<parameter name="browserName" value="AndroidLocal"></parameter>
-		<parameter name="deviceName" value="Samsung Galaxy S9"></parameter>
-		<parameter name="udid" value="22b222b23d047ece"></parameter>
-		<parameter name="port" value="5000"></parameter>
-		<parameter name="systemPort" value="8200"></parameter>
-		<parameter name="version" value="9.0"></parameter>
-		<parameter name="app"
-			value="\\driverResources\\com.buuuk.st_com.sph.straitstimes.views.activities.SplashActivity_ver_713.apk"></parameter>
-		<parameter name="appPackage" value="com.buuuk.st"></parameter>
-		<parameter name="appActivity"
-			value="com.sph.straitstimes.views.activities.SplashActivity"></parameter>
+<!-- 	<test name="Samsung Galaxy S9"> -->
+<!-- 		<parameter name="browserName" value="AndroidLocal"></parameter> -->
+<!-- 		<parameter name="deviceName" value="Samsung Galaxy S9"></parameter> -->
+<!-- 		<parameter name="udid" value="22b222b23d047ece"></parameter> -->
+<!-- 		<parameter name="port" value="5000"></parameter> -->
+<!-- 		<parameter name="systemPort" value="8200"></parameter> -->
+<!-- 		<parameter name="version" value="9.0"></parameter> -->
+<!-- 		<parameter name="app" -->
+<!-- 			value="\\driverResources\\com.buuuk.st_com.sph.straitstimes.views.activities.SplashActivity_ver_713.apk"></parameter> -->
+<!-- 		<parameter name="appPackage" value="com.buuuk.st"></parameter> -->
+<!-- 		<parameter name="appActivity" -->
+<!-- 			value="com.sph.straitstimes.views.activities.SplashActivity"></parameter> -->
 
-		<classes>
-			<class name="test.TestCases"></class>
-		</classes>
-	</test>
+<!-- 		<classes> -->
+<!-- 			<class name="test.TestCases"></class> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
 
 
 	<test name="Samsung Galaxy Note 4">
@@ -41,13 +41,26 @@
 
 	</test>
 
-	<test name="Chrome">
-		<parameter name="browserName" value="chrome"></parameter>
-		<parameter name="port" value="5566"></parameter>
-		<classes>
-			<class name="test.TestCases"></class>
-		</classes>
-	</test>
+<!-- 	<test name="Chrome"> -->
+<!-- 		<parameter name="browserName" value="chrome"></parameter> -->
+<!-- 		<parameter name="port" value="5566"></parameter> -->
+<!-- 		<classes> -->
+<!-- 			<class name="test.TestCases"></class> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+<!-- 	<test name="Firefox"> -->
+<!-- 		<parameter name="browserName" value="firefox"></parameter> -->
+<!-- 		<parameter name="port" value="5567"></parameter> -->
+<!-- 		<classes> -->
+<!-- 			<class name="test.TestCases"></class> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+
+
+
+
 
 </suite>
  

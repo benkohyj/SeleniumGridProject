@@ -7,6 +7,7 @@ import java.net.URL;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
@@ -21,7 +22,8 @@ import loadscrcpy.Load_scrcpy;
 public class BeforeAfterHooks {
 	
 	public AndroidDriver<AndroidElement> androidDriver;
-	public WebDriver chromeDriver;
+	public WebDriver browserDriver;
+	public String automationType = ""; 
 	
 	@BeforeTest(alwaysRun=true)
 	@Parameters({"browserName","port","deviceName","udid","systemPort","app","appPackage","appActivity"})
@@ -47,7 +49,24 @@ public class BeforeAfterHooks {
 			chromeoptions.merge(chromeCaps);
 			
 			URL chromeURL = new URL ("http://localhost:"+port+"/wd/hub");
-			chromeDriver = new RemoteWebDriver(chromeURL,chromeoptions);
+			WebDriver chromeDriver = new RemoteWebDriver(chromeURL,chromeoptions);
+			browserDriver= chromeDriver;
+			automationType= "browser";
+			break;
+			
+			
+		case("FIREFOX"):
+			DesiredCapabilities firefoxCaps = new DesiredCapabilities();
+			firefoxCaps.setBrowserName("firefox");
+			firefoxCaps.setPlatform(Platform.ANY);
+
+			FirefoxOptions firefoxoptions = new FirefoxOptions();
+			firefoxoptions.merge(firefoxCaps);
+
+			URL firefoxURL = new URL ("http://localhost:"+port+"/wd/hub");
+			WebDriver firefoxDriver = new RemoteWebDriver(firefoxURL,firefoxoptions);
+			browserDriver = firefoxDriver;
+			automationType= "browser";
 			break;
 			
 		case("ANDROIDLOCAL"):
@@ -66,6 +85,7 @@ public class BeforeAfterHooks {
 			
 			URL androidURL = new URL ("http://localhost:"+port+"/wd/hub");
 			androidDriver = new AndroidDriver<AndroidElement>(androidURL,androidCaps);
+			automationType= "android";
 			break;
 
 		}
@@ -74,14 +94,29 @@ public class BeforeAfterHooks {
 	
 	@AfterTest(alwaysRun=true)
 	public void tearDown() {
-		androidDriver.closeApp();
-		System.out.println("App Closed");
-		androidDriver.quit();
-		System.out.println("Android Test Ended");
+		switch(automationType.toUpperCase()){
+		
+		case("BROWSER"): 		
+			browserDriver.quit();
+			System.out.println("Browser Test Ended");
+			break;
+			
+		case("ANDROID"): 		
+			androidDriver.closeApp();
+			System.out.println("App Closed");
+			androidDriver.quit();
+			System.out.println("Android Test Ended");
+			break;
+				
+		}
+		
+		//androidDriver.closeApp();
+		//System.out.println("App Closed");
+		//androidDriver.quit();
+		//System.out.println("Android Test Ended");
 		
 		
-		chromeDriver.quit();
-		System.out.println("Chrome Test Ended");		
+		
 	}
 
 }
