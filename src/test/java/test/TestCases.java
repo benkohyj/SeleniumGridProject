@@ -23,12 +23,13 @@ import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class TestCases extends BeforeAfterHooks{
+	WebDriverWait androidWait;
 		
-	@Test
+	@Test(priority = 1)
 	public void agreeLiscensePage() throws InterruptedException {
 		
 		
-		WebDriverWait androidWait = new WebDriverWait(androidDriver, 20);
+		androidWait = new WebDriverWait(androidDriver, 20);
 		androidWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("btn_tnc_ok")));
 		AndroidElement accept = androidDriver.findElementById("btn_tnc_ok");
 		accept.click();
@@ -37,9 +38,21 @@ public class TestCases extends BeforeAfterHooks{
 		DeviceActions.SwipeHorizontal(androidDriver, "left",2,0.8,0.2);
 		androidWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("skip")));
         androidDriver.findElement(By.id("skip")).click();
-		androidWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("article_title")));
-		DeviceActions.SwipeVertical(androidDriver, "up",2,0.8,0.2);
-    }
+	}
+		
+     @Test(priority = 2)
+     public void LoginPage() {
+     
+    	androidWait = new WebDriverWait(androidDriver, 20);
+        androidWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("article_title")));
+		androidDriver.findElementByClassName("android.widget.ImageButton").click();
+		androidDriver.findElementById("tv_login").click();
+		androidDriver.findElementById("editTextUsernameNew").sendKeys("premium_access2");
+		androidDriver.findElementById("editTextPasswordNew").sendKeys("Password123");
+		androidDriver.findElementById("buttonLoginNewUser").click();
+		
+     }
+    
 		
 	@Test(priority = 1)
 	public void LoginSTweb() {
@@ -49,7 +62,7 @@ public class TestCases extends BeforeAfterHooks{
 		
 		//Login
 		browserDriver.findElement(By.cssSelector("#sph_login")).click();
-		browserDriver.findElement(By.cssSelector("#IDToken1")).sendKeys("Premium_access3");
+		browserDriver.findElement(By.cssSelector("#IDToken1")).sendKeys("Premium_access2");
 		browserDriver.findElement(By.cssSelector("#IDToken2")).sendKeys("Password123");
 		browserDriver.findElement(By.cssSelector("#btnLogin")).click();
 	}

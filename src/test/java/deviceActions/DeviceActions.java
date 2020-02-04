@@ -21,27 +21,25 @@ public class DeviceActions  {
 
 		Double yAnchor = screenSize.getHeight()/y;
 		int Anchor = yAnchor.intValue();
-		System.out.println(Anchor);
 		
 		Double ScreenWidthRight = screenSize.getWidth() * x1;
 		int screenRight = ScreenWidthRight.intValue();
-		System.out.println(screenRight);
+		
 		
 		Double ScreenWidthLeft = screenSize.getWidth() * x2;
 		int screenLeft = ScreenWidthLeft.intValue();
-		System.out.println(screenLeft);
 
 		switch(Direction.toUpperCase()){
 		case("LEFT"):
 			new TouchAction(touchDriver).press(PointOption.point(screenRight, Anchor))
-			.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+			.waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
 			.moveTo(PointOption.point(screenLeft, Anchor))
 			.release().perform();
 			break;
 		
 		case("RIGHT"):
 			new TouchAction(touchDriver).press(PointOption.point(screenLeft, Anchor))
-			.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+			.waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
 			.moveTo(PointOption.point(screenRight, Anchor))
 			.release().perform();
 			break;
@@ -57,29 +55,26 @@ public class DeviceActions  {
 
 		Double xAnchor = screenSize.getWidth()/x; 
 		int Anchor = xAnchor.intValue();
-		System.out.println(Anchor);
 
 		Double ScreenWidthBottom = screenSize.getHeight() * y1;
 		int screenBottom = ScreenWidthBottom.intValue();
-		System.out.println(screenBottom);
 		
 
 		Double ScreenWidthTop = screenSize.getHeight() * y2;
 		int screenTop = ScreenWidthTop.intValue();
-		System.out.println(screenTop);
 
 
 		switch(Direction.toUpperCase()){
 		case("UP"):
 			new TouchAction(touchDriver).press(PointOption.point(Anchor, screenBottom))
-			.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+			.waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
 			.moveTo(PointOption.point(Anchor, screenTop))
 			.release().perform();
 			break;
 		
 		case("DOWN"):
 			new TouchAction(touchDriver).press(PointOption.point(Anchor, screenTop))
-			.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+			.waitAction(WaitOptions.waitOptions(Duration.ofMillis(500)))
 			.moveTo(PointOption.point(Anchor,screenBottom))
 			.release().perform();
 			break;
