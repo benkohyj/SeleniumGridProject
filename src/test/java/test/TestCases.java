@@ -27,19 +27,19 @@ public class TestCases extends BeforeAfterHooks{
 	@Test
 	public void agreeLiscensePage() throws InterruptedException {
 		
-		//WebElement Panel = driver.findElement(By.id("lists_pager"));
+		
 		WebDriverWait androidWait = new WebDriverWait(androidDriver, 20);
 		androidWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("btn_tnc_ok")));
 		AndroidElement accept = androidDriver.findElementById("btn_tnc_ok");
 		accept.click();
 		
 		androidWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("welcome")));
-		DeviceActions.Swipe(androidDriver, "left");
-		DeviceActions.Swipe(androidDriver, "right");
-        new WebDriverWait(androidDriver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='skip']")));
-        androidDriver.findElement(By.xpath("//*[@id='skip']")).click();
+		DeviceActions.SwipeHorizontal(androidDriver, "left",2,0.8,0.2);
+		androidWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("skip")));
+        androidDriver.findElement(By.id("skip")).click();
+		androidWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("article_title")));
+		DeviceActions.SwipeVertical(androidDriver, "up",2,0.8,0.2);
     }
-//.press(point(point.x + 120, point.y + 130))
 		
 	@Test(priority = 1)
 	public void LoginSTweb() {
