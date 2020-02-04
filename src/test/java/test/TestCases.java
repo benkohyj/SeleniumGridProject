@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import Actions.deviceActions;
 import baseclass.BeforeAfterHooks;
+import deviceActions.DeviceActions;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
@@ -25,14 +25,17 @@ import io.appium.java_client.touch.offset.PointOption;
 public class TestCases extends BeforeAfterHooks{
 		
 	@Test
-	public void agreeLiscensePage() {
+	public void agreeLiscensePage() throws InterruptedException {
 		
 		//WebElement Panel = driver.findElement(By.id("lists_pager"));
 		WebDriverWait androidWait = new WebDriverWait(androidDriver, 20);
 		androidWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("btn_tnc_ok")));
 		AndroidElement accept = androidDriver.findElementById("btn_tnc_ok");
 		accept.click();
-		new TouchAction(androidDriver).press(PointOption.point(1160, 1803)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(787))).moveTo(PointOption.point(107, 1839)).release().perform();
+		
+		androidWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("welcome")));
+		DeviceActions.Swipe(androidDriver, "left");
+		DeviceActions.Swipe(androidDriver, "right");
         new WebDriverWait(androidDriver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='skip']")));
         androidDriver.findElement(By.xpath("//*[@id='skip']")).click();
     }
