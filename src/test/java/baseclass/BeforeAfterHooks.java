@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Platform;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -45,7 +47,8 @@ public class BeforeAfterHooks {
 			chromeCaps.setPlatform(Platform.ANY);	
 		
 			ChromeOptions chromeoptions = new ChromeOptions();
-			chromeoptions.addArguments("--start-maximized");
+			chromeoptions.addArguments("--window-position=0,0");
+			chromeoptions.addArguments("--window-size=800,450");
 			chromeoptions.merge(chromeCaps);
 			
 			URL chromeURL = new URL ("http://localhost:"+port+"/wd/hub");
@@ -59,13 +62,17 @@ public class BeforeAfterHooks {
 			DesiredCapabilities firefoxCaps = new DesiredCapabilities();
 			firefoxCaps.setBrowserName("firefox");
 			firefoxCaps.setPlatform(Platform.ANY);
-
-			FirefoxOptions firefoxoptions = new FirefoxOptions();
-			firefoxoptions.merge(firefoxCaps);
-
+			
+//			FirefoxOptions firefoxoptions = new FirefoxOptions();
+//			firefoxoptions.addArguments(arguments)
+//			firefoxoptions.addArguments("--window-size=800,450");
+//			firefoxoptions.merge(firefoxCaps);
+			
 			URL firefoxURL = new URL ("http://localhost:"+port+"/wd/hub");
-			WebDriver firefoxDriver = new RemoteWebDriver(firefoxURL,firefoxoptions);
+			WebDriver firefoxDriver = new RemoteWebDriver(firefoxURL,firefoxCaps);
 			browserDriver = firefoxDriver;
+			firefoxDriver.manage().window().setSize(new Dimension(800,450));
+			firefoxDriver.manage().window().setPosition(new Point(800,0));
 			automationType= "browser";
 			break;
 			
@@ -77,10 +84,10 @@ public class BeforeAfterHooks {
 			androidCaps.setCapability("deviceName", deviceName);
 			androidCaps.setCapability("udid", udid);
 			androidCaps.setCapability("systemPort", systemPort);
-			androidCaps.setCapability("app", rPath + app );
+			//androidCaps.setCapability("app", rPath + app); 		//uncomment if app is not installed
 			androidCaps.setCapability("appPackage", appPackage);
 			androidCaps.setCapability("appActivity", appActivity);
-			androidCaps.setCapability("noReset", "true");
+			androidCaps.setCapability("noReset", "false");
 			androidCaps.setCapability("fullReset", "false");
 			
 			URL androidURL = new URL ("http://localhost:"+port+"/wd/hub");
@@ -109,13 +116,6 @@ public class BeforeAfterHooks {
 			break;
 				
 		}
-		
-		//androidDriver.closeApp();
-		//System.out.println("App Closed");
-		//androidDriver.quit();
-		//System.out.println("Android Test Ended");
-		
-		
 		
 	}
 

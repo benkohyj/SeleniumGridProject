@@ -9,7 +9,7 @@ public class Load_scrcpy {
 		    try
 		    {
 		      
-		 	 r.exec("cmd /c start cmd.exe /K \"scrcpy -s " + udid);
+		    	 r.exec("cmd /c start /min cmd.exe /K \"scrcpy -s " + udid);
 	    	 
 		    }
 		    catch(Exception e){
