@@ -47,7 +47,7 @@ public class CMD {
 		break;
 
 		case("Samsung Galaxy Note 8"):
-			r.exec(startCMD + "RegisterNoet8.bat", null, setupFiles);
+			r.exec(startCMD + "RegisterNote8.bat", null, setupFiles);
 		break;	
 
 		case("Samsung Galaxy Note 4"):
