@@ -39,23 +39,23 @@
 		</classes>
 	</test>
 
-	<!-- <test name="Samsung Galaxy Note 8"> -->
-	<!-- <parameter name="browserName" value="AndroidLocal"></parameter> -->
-	<!-- <parameter name="deviceName" value="Samsung Galaxy Note 8"></parameter> -->
-	<!-- <parameter name="udid" value="ce061716b1a90416037e"></parameter> -->
-	<!-- <parameter name="port" value="5001"></parameter> -->
-	<!-- <parameter name="systemPort" value="8202"></parameter> -->
-	<!-- <parameter name="version" value="9.0"></parameter> -->
-	<!-- <parameter name="app" -->
-	<!-- value="\\driverResources\\com.buuuk.st_com.sph.straitstimes.views.activities.SplashActivity_ver_713.apk"></parameter> -->
-	<!-- <parameter name="appPackage" value="com.buuuk.st"></parameter> -->
-	<!-- <parameter name="appActivity" -->
-	<!-- value="com.sph.straitstimes.views.activities.SplashActivity"></parameter> -->
+	<test name="Samsung Galaxy Note 8">
+	<parameter name="browserName" value="AndroidLocal"></parameter>
+	<parameter name="deviceName" value="Samsung Galaxy Note 8"></parameter>
+	<parameter name="udid" value="ce061716b1a90416037e"></parameter>
+	<parameter name="port" value="5001"></parameter>
+	<parameter name="systemPort" value="8202"></parameter>
+	<parameter name="version" value="9.0"></parameter>
+	<parameter name="app"
+	value="\\driverResources\\com.buuuk.st_com.sph.straitstimes.views.activities.SplashActivity_ver_713.apk"></parameter>
+	<parameter name="appPackage" value="com.buuuk.st"></parameter>
+	<parameter name="appActivity"
+	value="com.sph.straitstimes.views.activities.SplashActivity"></parameter>
 
-	<!-- <classes> -->
-	<!-- <class name="test.TestCases"></class> -->
-	<!-- </classes> -->
-	<!-- </test> -->
+	<classes>
+	<class name="test.TestCases"></class>
+	</classes>
+	</test>
 
 
 	<test name="Chrome">

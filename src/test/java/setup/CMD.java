@@ -17,7 +17,7 @@ public class CMD {
 
 	public static void startHUB() throws IOException, InterruptedException {
 		r.exec(startCMD + "RegisterHub.bat", null, setupFiles);
-		Thread.sleep(5000);
+		Thread.sleep(5000);	//Allow time for Hub to start up
 	}
 
 
@@ -34,7 +34,7 @@ public class CMD {
 		break;		
 		
 		}
-		Thread.sleep(5000);
+		Thread.sleep(5000); //Allow time for node to be registered
 	}
 
 
@@ -55,7 +55,7 @@ public class CMD {
 		break;	
 		}
 		
-		Thread.sleep(10000);
+		Thread.sleep(10000); //Allow time for appium server to start and node to be registered
 	}
 
 //	public static void quitCMD() throws IOException {

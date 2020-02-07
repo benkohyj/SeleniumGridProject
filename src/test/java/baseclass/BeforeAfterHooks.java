@@ -28,7 +28,7 @@ public class BeforeAfterHooks {
 	public WebDriver browserDriver;
 	public String automationType = ""; 
 
-	@BeforeSuite
+	@BeforeSuite //Start up hub
 	public void runSetup() throws IOException, InterruptedException {
 		CMD.startHUB();
 	}
@@ -48,7 +48,7 @@ public class BeforeAfterHooks {
 		switch (browserName.toUpperCase()) {
 
 		case("CHROME"):
-			CMD.registerBROWSER(browserName);
+			CMD.registerBROWSER(browserName);	//Registering of browser on the grid
 		DesiredCapabilities chromeCaps = new DesiredCapabilities();
 		chromeCaps.setBrowserName("chrome");
 		chromeCaps.setPlatform(Platform.ANY);	
@@ -85,8 +85,8 @@ public class BeforeAfterHooks {
 		break;
 
 		case("ANDROIDLOCAL"):
-			CMD.loadscrcpy(udid);
-		CMD.registerMOBILE(deviceName);
+			CMD.loadscrcpy(udid);		 //Calling Reflection
+		CMD.registerMOBILE(deviceName);  //Registering of device on the grid
 		DesiredCapabilities androidCaps = new DesiredCapabilities();
 		androidCaps.setCapability("automationName", "UiAutomator2");
 		androidCaps.setCapability("platformName", "Android");
