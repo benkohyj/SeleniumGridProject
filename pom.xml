@@ -57,7 +57,7 @@
 				<version>3.0.0-M4</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>ParallelTest.xml</suiteXmlFile>
+						<suiteXmlFile>${fileName}</suiteXmlFile>
 					</suiteXmlFiles>
 					<configuration>
 						<source>1.8</source>
